@@ -4,13 +4,12 @@
 	<head>
 		<meta charset="utf-8">
 
-                <title>Doing Our Best</title>
+                <title>Software Development for Engineering Research - Getting Started</title>
 
                 <meta name="description" content="
-                A discussion of best practices in scientific computing.
-                This was presented to the NESLS program at ORNL in 2017.
+                First lecture for ME 599: Software Development for Engineering Research
                 ">
-		<meta name="author" content="Kathryn Huff">
+		<meta name="author" content="Kyle Niemeyer">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -45,15 +44,59 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-                                <section>
-                                        <h1>Doing Our Best</h1>
-                                        <h3>Practices in Computational Nuclear Engineering</h3>
-                                        <br/>
-                                        <h3>Kathryn Huff. March 27, 2018</h3>
-                                        <h3>NPRE 199, Urbana, IL</h3>
-                                </section>
-				<section>
-                                        <section>
+                <section>
+                    <h1>Getting Started</h1>
+                    <h3>Software Development for Engineering Research</h3>
+                    <br/>
+                    <h3>Kyle Niemeyer. 4 April 2018</h3>
+                    <h3>ME 599, Corvallis, OR</h3>
+                </section>
+                <section>
+                    <section data-markdown>
+                        <textarea data-template>
+                            ## Today: Class overview & getting started with version control
+                        </textarea>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ### What this class **is** for:
+
+                            - Learning computational skills to be successful in modern research
+                            - Developing a software package from scratch for your research
+                        </textarea>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ### What this class **isn't** for:
+
+                            - Just learning more Python (though you will)
+                            - Those who aren't comfortable doing open-ended, self-directed work
+                        </textarea>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ### What are we going to learn about?
+
+                            - Version control
+                            - Collaborative software development
+                            -
+                        </textarea>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Who are you?</h1>
+                        <br/>
+                        <img src="./images/student-breakdown.png" height="300" alt="Student status breakdown">
+                        <img src="./images/area-breakdown.png" height="300" alt="Student research area breakdown">
+                    </section>
+                </section>
+                <!--
+                <section>
+                    <section>
                          <span class="fragment fade-out">
                                                 <a
                                                   href="http://uchicago.edu"
@@ -179,12 +222,12 @@
                                                 </span>
 
                                                 <span class="fragment">
-                                                        <a 
-                                                                href="http://joss.theoj.org" 
-                                                                class="image"><img 
-                                                                height="150" 
-                                                                src="./images/joss.png" 
-                                                                alt="JOSS"></a> 
+                                                        <a
+                                                                href="http://joss.theoj.org"
+                                                                class="image"><img
+                                                                height="150"
+                                                                src="./images/joss.png"
+                                                                alt="JOSS"></a>
                                                 </span>
                                                         <span class="fragment">
                                                                 <a
@@ -218,43 +261,7 @@
                                                 - Lord Kelvin, 1895
                                         </blockquote>
                     </section>
-                    <!--
-                    <section data-background-iframe="https://earth.nullschool.net" data-background-interactive style="background: rgba(255, 255, 255, 0.80);">
-                                        <blockquote cite="Merton, R.K. 'The
-                                          Normative Structure of Science'. In:
-                                          Merton, R. K., The Sociology of
-                                          Science: Theoretical and Empirical
-                                          Investigations, Chicago, IL:
-                                          University Of Chicago
-                                          Press, 1942.">
-                                                &ldquo;
-                                                Organized Skepticism.
-                                                Scientists are critical: All
-                                                ideas must be tested and are
-                                                subject to rigorous structured
-                                                community scrutiny.&rdquo; - R.K.
-                                                Merton, 1942
-                                        </blockquote>
-                    </section>
-                            <section data-background-iframe="https://earth.nullschool.net" data-background-interactive style="background: rgba(255, 255, 255, 0.80);">
-                                        <blockquote cite="Donoho, Reproducible
-                                          Research in
-                                          Computational Harmonic Analysis,
-                                          2009.">
-                                        &ldquo;
-                                        The scientific method’s central
-                                        motivation is the ubiquity of error—the
-                                        awareness
-                                        that mistakes and self-delusion can
-                                        creep in
-                                        absolutely anywhere and that the
-                                        scientist’s effort
-                                        is primarily expended in recognizing
-                                        and rooting
-                                        out error.
-                                        &rdquo; - Donoho, 2009.
-                                      </blockquote>
-                      </section>-->
+
                     <section data-background-iframe="https://earth.nullschool.net" data-background-interactive style="background: rgba(255, 255, 255, 0.80);">
                                         <blockquote cite="Feynman, R.  1974 commencement address at Caltech.">
                     &ldquo;the first principle is that you must not fool yourself, and you are the easiest person to fool.&rdquo; - R. Feynman, 1974
@@ -384,148 +391,148 @@
 					<section>
                                         <blockquote cite="
                                           Stodden, Victoria.
-                                          The Scientific Method in Practice: 
-                                          Reproducibility in the Computational 
+                                          The Scientific Method in Practice:
+                                          Reproducibility in the Computational
                                           Sciences
                                           MIT Sloan School of Management,
-                                          MIT Sloan School Working Paper 
+                                          MIT Sloan School Working Paper
                                           4773-10. February 2010.">
                                                 &ldquo;
                                         Computational science is a special case
-                                        of scientific research: the work is 
+                                        of scientific research: the work is
                                         easily
-                                        shared via the Internet since the 
-                                        paper, code, and data are digital and 
+                                        shared via the Internet since the
+                                        paper, code, and data are digital and
                                         those three aspects
-                                        are all that is required to reproduce 
-                                        the results, given sufficient 
+                                        are all that is required to reproduce
+                                        the results, given sufficient
                                         computation tools.
                                                 &rdquo; - Stodden, 2010.
                                       </blockquote>
-                                        
+
 					</section>
                                 </section>
 				<section>
                                <section data-background-image="./images/best-practices-paper.png" data-background-size="contain">
                                 </section>
-                               <section 
-                                       data-background-image="./images/best-practices-paper.png" 
-                                       data-background-size="contain" 
+                               <section
+                                       data-background-image="./images/best-practices-paper.png"
+                                       data-background-size="contain"
                                        style="background: rgba(167, 167, 255, 0.95);">
-                                       <h3>Write programs for people, not 
+                                       <h3>Write programs for people, not
                                                computers.</h3>
                                         <ul>
                                        <ul>
-                                       <li class='fragment'>A program should 
-                                               not require its readers to hold 
-                                               more than a handful of facts in 
-                                       memory at once.</li> 
-                                       <li class='fragment'>Make names 
-                                               consistent, distinctive, and 
+                                       <li class='fragment'>A program should
+                                               not require its readers to hold
+                                               more than a handful of facts in
+                                       memory at once.</li>
+                                       <li class='fragment'>Make names
+                                               consistent, distinctive, and
                                                meaningful.</li>
-                                        <li class='fragment'>Make code style and 
-                                                formatting consistent.</li> 
+                                        <li class='fragment'>Make code style and
+                                                formatting consistent.</li>
                                        </ul>
                                 </section>
-                               <section data-background-image="./images/best-practices-paper.png" data-background-size="contain" 
+                               <section data-background-image="./images/best-practices-paper.png" data-background-size="contain"
                                        style="background: rgba(167, 167, 225, 0.95);">
                                         <h3>Let the computer do the work.</h3>
                                         <ul>
                                         <li class="fragment">Make the computer repeat tasks.</li>
-                                        <li class="fragment">Save recent 
+                                        <li class="fragment">Save recent
                                                 commands in a file for re-use.</li>
-                                        <li class="fragment">Use a build tool 
+                                        <li class="fragment">Use a build tool
                                                 to automate workflows.</li>
                                        </ul>
                                 </section>
-                               <section data-background-image="./images/best-practices-paper.png" data-background-size="contain" 
+                               <section data-background-image="./images/best-practices-paper.png" data-background-size="contain"
                                        style="background: rgba(167, 167, 225, 0.95);">
                                         <h3>Make incremental changes.</h3>
                                         <ul>
-                                        <li class="fragment">Work in small 
-                                                steps with frequent feedback 
+                                        <li class="fragment">Work in small
+                                                steps with frequent feedback
                                                 and course correction.</li>
                                        </ul>
                                 </section>
-                               <section data-background-image="./images/best-practices-paper.png" data-background-size="contain" 
+                               <section data-background-image="./images/best-practices-paper.png" data-background-size="contain"
                                        style="background: rgba(167, 167, 225, 0.95);">
                                         <h3>Use a version control system.</h3>
                                         <ul>
-                                        <li class="fragment">Put everything 
-                                                that has been created manually 
+                                        <li class="fragment">Put everything
+                                                that has been created manually
                                                 in version control.</li>
                                        </ul>
                                 </section>
-                               <section data-background-image="./images/best-practices-paper.png" data-background-size="contain" 
+                               <section data-background-image="./images/best-practices-paper.png" data-background-size="contain"
                                        style="background: rgba(167, 167, 225, 0.95);">
-                                        <h3>Don't repeat yourself (or 
+                                        <h3>Don't repeat yourself (or
                                                 others).</h3>
                                         <ul>
-                                        <li class="fragment">Every piece of 
-                                                data must have a single 
-                                                authoritative representation in 
+                                        <li class="fragment">Every piece of
+                                                data must have a single
+                                                authoritative representation in
                                                 the system.</li>
-                                        <li class="fragment">Modularize code 
-                                                rather than copying and 
+                                        <li class="fragment">Modularize code
+                                                rather than copying and
                                                 pasting.</li>
-                                        <li class="fragment">Re-use code 
+                                        <li class="fragment">Re-use code
                                                 instead of rewriting it.</li>
                                        </ul>
                                 </section>
-                               <section data-background-image="./images/best-practices-paper.png" data-background-size="contain" 
+                               <section data-background-image="./images/best-practices-paper.png" data-background-size="contain"
                                        style="background: rgba(167, 167, 225, 0.95);">
                                         <h3>Plan for mistakes.</h3>
                                         <ul>
-                                        <li class="fragment">Add assertions to 
-                                                programs to check their 
+                                        <li class="fragment">Add assertions to
+                                                programs to check their
                                                 operation.</li>
-                                        <li class="fragment">Use an 
-                                                off-the-shelf unit testing 
+                                        <li class="fragment">Use an
+                                                off-the-shelf unit testing
                                                 library.</li>
                                         <li class="fragment">Turn bugs into test cases.</li>
                                         <li class="fragment">Use a symbolic debugger.</li>
                                        </ul>
                                 </section>
-                               <section data-background-image="./images/best-practices-paper.png" data-background-size="contain" 
+                               <section data-background-image="./images/best-practices-paper.png" data-background-size="contain"
                                        style="background: rgba(167, 167, 225, 0.95);">
-                                        <h3>Optimize software only after it works 
+                                        <h3>Optimize software only after it works
                                                 correctly.</h3>
                                         <ul>
-                                        <li class="fragment">Use a profiler to 
+                                        <li class="fragment">Use a profiler to
                                                 identify bottlenecks.</li>
-                                        <li class="fragment">Write code in the 
-                                                highest-level language 
+                                        <li class="fragment">Write code in the
+                                                highest-level language
                                                 possible.</li>
                                        </ul>
                                 </section>
-                               <section data-background-image="./images/best-practices-paper.png" data-background-size="contain" 
+                               <section data-background-image="./images/best-practices-paper.png" data-background-size="contain"
                                        style="background: rgba(167, 167, 225, 0.95);">
-                                        <h3>Document design and purpose, not 
+                                        <h3>Document design and purpose, not
                                                 mechanics.</h3>
                                         <ul>
-                                        <li class="fragment">Document 
-                                                interfaces and reasons, not 
+                                        <li class="fragment">Document
+                                                interfaces and reasons, not
                                                 implementations.</li>
-                                        <li class="fragment">Refactor code in 
-                                                preference to explaining how it 
+                                        <li class="fragment">Refactor code in
+                                                preference to explaining how it
                                                 works.</li>
-                                        <li class="fragment">Embed the 
-                                                documentation for a piece of 
+                                        <li class="fragment">Embed the
+                                                documentation for a piece of
                                                 software in that software.</li>
                                        </ul>
                                 </section>
-                               <section data-background-image="./images/best-practices-paper.png" data-background-size="contain" 
+                               <section data-background-image="./images/best-practices-paper.png" data-background-size="contain"
                                        style="background: rgba(167, 167, 225, 0.95);">
                                         <h3>Collaborate.</h3>
                                         <ul>
-                                        <li class="fragment">Use pre-merge code 
+                                        <li class="fragment">Use pre-merge code
                                                 reviews.</li>
-                                        <li class="fragment">Use pair 
-                                                programming when bringing 
-                                                someone new up to speed and 
-                                                when tackling particularly 
+                                        <li class="fragment">Use pair
+                                                programming when bringing
+                                                someone new up to speed and
+                                                when tackling particularly
                                                 tricky problems.</li>
-                                        <li class="fragment">Use an issue 
+                                        <li class="fragment">Use an issue
                                                 tracking tool.</li>
                                        </ul>
                                </section>
@@ -535,48 +542,48 @@
                                </section>
                                <section data-background-image="https://covers.oreillystatic.com/images/0636920033424/lrg.jpg" data-background-size="contain" style="background: rgba(255, 255, 255, 0.95);">
                                         <h2>Getting Started</h2>
-                                        <blockquote cite="Merton, R.K. 'The 
-                                          Normative Structure of Science'. In: 
+                                        <blockquote cite="Merton, R.K. 'The
+                                          Normative Structure of Science'. In:
                                           Merton, R. K., The Sociology of
-                                          Science: Theoretical and Empirical 
-                                          Investigations, Chicago, IL: 
+                                          Science: Theoretical and Empirical
+                                          Investigations, Chicago, IL:
                                           University Of Chicago
                                           Press, 1942.">
                                                 &ldquo;
-                                                Organized Skepticism. 
-                                                Scientists are critical: All 
+                                                Organized Skepticism.
+                                                Scientists are critical: All
                                                 ideas must be tested and are
-                                                subject to rigorous structured 
-                                                community scrutiny.&rdquo; - R.K. 
+                                                subject to rigorous structured
+                                                community scrutiny.&rdquo; - R.K.
                                                 Merton, 1942
                                         </blockquote>
-                                        
+
 					</section>
                                <section data-background-image="https://covers.oreillystatic.com/images/0636920033424/lrg.jpg" data-background-size="contain" style="background: rgba(255, 255, 255, 0.95);">
                                         <h2>Data Storage</h2>
                                         <ul>
                                           <li class="fragment">
                                             <b>Good:</b> pencil and paper</li>
-                                          
+
                                           <li class="fragment">
-                                            <b>Better:</b> 
+                                            <b>Better:</b>
                                             spreadsheet</li>
-                                          
+
                                           <li class="fragment">
-                                            <b style="color:green">Best:</b> 
+                                            <b style="color:green">Best:</b>
                                              standardized file format, database management system</li>
                                         </ul>
                                         <br/>
                                         <br/>
-                                        <p class="fragment"><b 
-                                          style="color:blue">Formats:</b> 
-                                          Evaluated Nuclear Data File (ENDF), 
-                                          Evaluated Nuclear Structure Data File 
-                                          (ENSDF), Hierarchical Data Format 
+                                        <p class="fragment"><b
+                                          style="color:blue">Formats:</b>
+                                          Evaluated Nuclear Data File (ENDF),
+                                          Evaluated Nuclear Structure Data File
+                                          (ENSDF), Hierarchical Data Format
                                           (HDF), etc.</p>
                                           <p class="fragment" >
-                                          <b style="color:blue">Management:</b> 
-                                          C/Python/Fortran APIs, SQL, MySQL, MongoDB, 
+                                          <b style="color:blue">Management:</b>
+                                          C/Python/Fortran APIs, SQL, MySQL, MongoDB,
                                           etc.</p>
                                </section>
                                <section data-background-image="https://covers.oreillystatic.com/images/0636920033424/lrg.jpg" data-background-size="contain" style="background: rgba(255, 255, 255, 0.95);">
@@ -586,33 +593,33 @@
                                           <li class="fragment">
                                             <b>Good:</b> hope</li>
                                           <li class="fragment">
-                                            <b>Better:</b> 
+                                            <b>Better:</b>
                                             nightly emails</li>
                                           <li class="fragment">
-                                            <b style="color:green">Best:</b> 
+                                            <b style="color:green">Best:</b>
                                             remote version control</li>
                                         </ul>
 
                                         <br/>
                                         <br/>
                                         <p class="fragment">
-                                        <b style="color:blue">Version Control Systems:</b> 
+                                        <b style="color:blue">Version Control Systems:</b>
                                         cvs, svn, hg, <b>git</b></p>
                                </section>
                                <section data-background-image="https://covers.oreillystatic.com/images/0636920033424/lrg.jpg" data-background-size="contain" style="background: rgba(255, 255, 255, 0.95);">
                                         <h2>Managing Changes</h2>
                                         <ul>
                                           <li class="fragment">
-                                            <b>Good:</b> 
+                                            <b>Good:</b>
                                             naming convention</li>
-                                          
+
                                           <li class="fragment">
-                                            <b>Better:</b> 
+                                            <b>Better:</b>
                                             clever naming convention</li>
                                                 <li class="fragment">
-                                                  <b style="color:green">Best:</b> 
+                                                  <b style="color:green">Best:</b>
                                               local version control</li>
-                                          
+
                                         </ul>
                                         <p class="fragment">
                                                <a href=""
@@ -624,13 +631,13 @@
 				<section>
                                <section data-background-image="https://covers.oreillystatic.com/images/0636920033424/lrg.jpg" data-background-size="contain" style="background: rgba(255, 255, 255, 0.95);">
                                         <h2>Getting It Done</h2>
-                                        <blockquote cite="private communication 
-                                          with strom borman indicates that 
-                                          leonid polterovic said this once in 
+                                        <blockquote cite="private communication
+                                          with strom borman indicates that
+                                          leonid polterovic said this once in
                                           2014.">
                                                 &ldquo;
-                                                It takes just as much time to 
-                                                write a good paper as it takes 
+                                                It takes just as much time to
+                                                write a good paper as it takes
                                                 to write a bad one.
                                                 &rdquo; - Polterovich, 2014
                                         </blockquote>
@@ -639,89 +646,89 @@
                                         <h2>Analysis</h2>
                                         <ul>
                                           <li class="fragment">
-                                            <b>Good:</b> 
+                                            <b>Good:</b>
                                             pencil and calculator</li>
-                                          
+
                                           <li class="fragment">
-                                            <b>Better:</b> 
+                                            <b>Better:</b>
                                             spreadsheets, matlab, mathematica</li>
                                                 <li class="fragment">
-                                                  <b style="color:green">Best:</b> 
-                                              scripting, open source libraries, modern 
+                                                  <b style="color:green">Best:</b>
+                                              scripting, open source libraries, modern
                                                 programming language</li>
-                                          
+
                                         </ul>
 
                                         <br/>
                                         <br/>
-                                        <p class="fragment"><b style="color:blue">Hint:</b> 
-                                        Check out PyNE, a python toolkit for 
+                                        <p class="fragment"><b style="color:blue">Hint:</b>
+                                        Check out PyNE, a python toolkit for
                                         nuclear engineering analysis.</p>
                                </section>
                                <section data-background-image="https://covers.oreillystatic.com/images/0636920033424/lrg.jpg" data-background-size="contain" style="background: rgba(255, 255, 255, 0.95);">
                                         <h2>Multiple File Cleanup</h2>
                                         <ul>
                                           <li class="fragment">
-                                            <b>Good:</b> 
+                                            <b>Good:</b>
                                             manually edit every file</li>
-                                          
+
                                           <li class="fragment">
-                                            <b>Better:</b> 
+                                            <b>Better:</b>
                                             search and replace in each file</li>
                                                 <li class="fragment">
-                                                  <b style="color:green">Best:</b> 
-                                              scripted batch editing</li> 
+                                                  <b style="color:green">Best:</b>
+                                              scripted batch editing</li>
                                         </ul>
 
                                         <br/>
                                         <br/>
                                         <p class="fragment">
-                                        <b style="color:blue">Hint:</b> 
-                                        try a tutorial on BASH, CSH, Python, 
+                                        <b style="color:blue">Hint:</b>
+                                        try a tutorial on BASH, CSH, Python,
                                         or Perl.</p>
                                         </section>
                                <section data-background-image="https://covers.oreillystatic.com/images/0636920033424/lrg.jpg" data-background-size="contain" style="background: rgba(255, 255, 255, 0.95);">
                                         <h2>Excecuting Workflows</h2>
                                         <ul>
                                           <li class="fragment">
-                                            <b>Good:</b> 
+                                            <b>Good:</b>
                                             retype a series of commands</li>
-                                          
+
                                           <li class="fragment">
-                                            <b>Better:</b> 
+                                            <b>Better:</b>
                                             bash script</li>
                                                 <li class="fragment">
-                                                  <b style="color:green">Best:</b> 
+                                                  <b style="color:green">Best:</b>
                                                   build system</li>
                                             </ul>
                                         <br/>
                                         <br/>
                                         <p class="fragment">
-                                        <b style="color:blue">Build System Tools:</b> 
+                                        <b style="color:blue">Build System Tools:</b>
                                         make, autoconf, automake, cmake, etc.</p>
                                         </section>
                                <section data-background-image="https://covers.oreillystatic.com/images/0636920033424/lrg.jpg" data-background-size="contain" style="background: rgba(255, 255, 255, 0.95);">
                                         <h2>Data Structures</h2>
                                         <ul>
                                           <li class="fragment">
-                                            <b>Good:</b> 
-                                            100 string variables holding 
+                                            <b>Good:</b>
+                                            100 string variables holding
                                               doubles</li>
-                                          
+
                                           <li class="fragment">
-                                            <b>Better:</b> 
+                                            <b>Better:</b>
                                             lists of lists of doubles</li>
                                           <li class="fragment">
-                                            <b style="color:green">Best:</b> 
-                                            appropriate powerful data 
+                                            <b style="color:green">Best:</b>
+                                            appropriate powerful data
                                             structures</li>
                                         </ul>
                                         <br/>
                                         <br/>
-                                        <p class="fragment"><b style="color:blue">Hint:</b> 
-                                        In FORTAN, learn about arrays. In C++, 
-                                        learn about maps, vectors, deques, 
-                                        queues, etc. In python, the power lies 
+                                        <p class="fragment"><b style="color:blue">Hint:</b>
+                                        In FORTAN, learn about arrays. In C++,
+                                        learn about maps, vectors, deques,
+                                        queues, etc. In python, the power lies
                                         in dictionaries and numpy arrays.</p>
 
                                         </section>
@@ -729,38 +736,38 @@
                                         <h2>API Design</h2>
                                         <ul>
                                           <li class="fragment">
-                                            <b>Good:</b> 
+                                            <b>Good:</b>
                                             single block of procedural code</li>
-                                          
+
                                           <li class="fragment">
-                                            <b>Better:</b> 
+                                            <b>Better:</b>
                                             separate functions</li>
                                           <li class="fragment">
-                                            <b style="color:green">Best:</b> 
-                                            small, testable functions, 
+                                            <b style="color:green">Best:</b>
+                                            small, testable functions,
                                               grouped into classes, DRY</li>
                                         </ul>
 
                                         <br/>
                                         <br/>
                                         <p class="fragment">
-                                        <b style="color:blue">DRY:</b> 
-                                        Dont Repeat Yourself. Code replication 
+                                        <b style="color:blue">DRY:</b>
+                                        Dont Repeat Yourself. Code replication
                                         is bug proliferation.</p>
                                         </section>
                                <section data-background-image="https://covers.oreillystatic.com/images/0636920033424/lrg.jpg" data-background-size="contain" style="background: rgba(255, 255, 255, 0.95);">
                                         <h2>Variable Naming</h2>
                                         <ul>
                                           <li class="fragment">
-                                            <b>Good:</b> 
+                                            <b>Good:</b>
                                             d1, d2, d3</li>
-                                          
+
                                           <li class="fragment">
-                                            <b>Better:</b> 
+                                            <b>Better:</b>
                                             x, y, z</li>
                                           <li class="fragment">
-                                            <b style="color:green">Best:</b> 
-                                            p.x, p.y, p.z, p=Point(x,y,z)</li> 
+                                            <b style="color:green">Best:</b>
+                                            p.x, p.y, p.z, p=Point(x,y,z)</li>
                                         </ul>
                                         </section>
 
@@ -768,21 +775,21 @@
                                         <h2>File I/O</h2>
                                         <ul>
                                           <li class="fragment">
-                                            <b>Good:</b> 
+                                            <b>Good:</b>
                                             none, hardcoded variables</li>
-                                          
+
                                           <li class="fragment">
-                                            <b>Better:</b> 
-                                            plain text input file, 
+                                            <b>Better:</b>
+                                            plain text input file,
                                               line-by-line homemade string parsing</li>
                                           <li class="fragment">
-                                            <b style="color:green">Best:</b> 
+                                            <b style="color:green">Best:</b>
                                             file parsing library</li>
                                         </ul>
                                         <br/>
                                         <br/>
                                         <p class="fragment">
-                                        <b style="color:blue">Tools:</b> 
+                                        <b style="color:blue">Tools:</b>
                                         python argparse, xml rng, etc.</li>
                                         </p>
                                         </section>
@@ -792,19 +799,19 @@
                                <section data-background-image="https://covers.oreillystatic.com/images/0636920033424/lrg.jpg" data-background-size="contain" style="background: rgba(255, 255, 255, 0.95);">
 
                                         <h2>Getting It Right</h2>
-                                        <blockquote cite="Donoho, Reproducible 
+                                        <blockquote cite="Donoho, Reproducible
                                           Research in
-                                          Computational Harmonic Analysis, 
+                                          Computational Harmonic Analysis,
                                           2009.">
                                         &ldquo;
                                         The scientific method’s central
-                                        motivation is the ubiquity of error—the 
+                                        motivation is the ubiquity of error—the
                                         awareness
-                                        that mistakes and self-delusion can 
+                                        that mistakes and self-delusion can
                                         creep in
-                                        absolutely anywhere and that the 
+                                        absolutely anywhere and that the
                                         scientist’s effort
-                                        is primarily expended in recognizing 
+                                        is primarily expended in recognizing
                                         and rooting
                                         out error.
                                         &rdquo; - Donoho, 2009.
@@ -814,20 +821,20 @@
                                         <h2>Error Detection</h2>
                                         <ul>
                                           <li class="fragment">
-                                            <b>Good:</b> 
+                                            <b>Good:</b>
                                             show results to experts</li>
                                           <li class="fragment">
-                                            <b>Better:</b> 
+                                            <b>Better:</b>
                                             integration testing</li>
                                           <li class="fragment">
-                                            <b style="color:green">Best:</b> 
+                                            <b style="color:green">Best:</b>
                                         unit test suite, continuous integration</li>
                                         </ul>
 
                                           <p class="fragment">
-                                          <a 
-                                            href="https://raw.githubusercontent.com/katyhuff/ne255fall2014/gh-pages/images/ci.png" 
-                                            class="image"><img 
+                                          <a
+                                            href="https://raw.githubusercontent.com/katyhuff/ne255fall2014/gh-pages/images/ci.png"
+                                            class="image"><img
                                             src="https://raw.githubusercontent.com/katyhuff/ne255fall2014/gh-pages/images/ci.png"></a>
                                           </p>
 
@@ -837,21 +844,21 @@
                                         <h2>Error Diagnostics</h2>
                                         <ul>
                                           <li class="fragment">
-                                            <b>Good:</b> 
+                                            <b>Good:</b>
                                             re-re-read the code</li>
                                           <li class="fragment">
-                                            <b>Better:</b> 
+                                            <b>Better:</b>
                                             print statements</li>
                                           <li class="fragment">
-                                            <b style="color:green">Best:</b> 
+                                            <b style="color:green">Best:</b>
                                         use a linter, a debugger, and a profiler</li>
                                         </ul>
                                         <br/>
                                         <br/>
                                         <p class="fragment">
-                                        <b style="color:blue">Tools:</b> 
-                                        cpplint, pyflakes, 
-                                        gdb, lldb, pdb, idb, valgrind, 
+                                        <b style="color:blue">Tools:</b>
+                                        cpplint, pyflakes,
+                                        gdb, lldb, pdb, idb, valgrind,
                                         kernprof, kcachegrind</li>
                                         </p>
                                         </section>
@@ -859,14 +866,14 @@
                                         <h2>Error Correction</h2>
                                         <ul>
                                           <li class="fragment">
-                                            <b>Good:</b> 
+                                            <b>Good:</b>
                                             fix code</li>
-                                          
+
                                           <li class="fragment">
-                                            <b>Better:</b> 
+                                            <b>Better:</b>
                                             fix, add an exception</li>
                                           <li class="fragment">
-                                            <b style="color:green">Best:</b> 
+                                            <b style="color:green">Best:</b>
                                             fix, add an exception, add a test</li>
                                         </ul>
                                         </section>
@@ -877,14 +884,14 @@
 					<section>
                                         <h2>Getting It Together</h2>
                                         &ldquo;
-                                        Two of the biggest challenges 
+                                        Two of the biggest challenges
                                         scientists and other programmers
-                                        face when working with code and data 
+                                        face when working with code and data
                                         are keeping track of
-                                        changes (and being able to revert them 
+                                        changes (and being able to revert them
                                         if things go wrong), and
-                                        <b>collaborating on a program or 
-                                          dataset.</b> 
+                                        <b>collaborating on a program or
+                                          dataset.</b>
                                         &rdquo;
                                         - Wilson, et al. 2014.
                                       </blockquote>
@@ -894,20 +901,20 @@
                                         <h2>Merging Collaborative Work</h2>
                                         <ul>
                                           <li class="fragment">
-                                            <b>Good:</b> 
+                                            <b>Good:</b>
                                             single master copy, waiting</li>
-                                          
+
                                           <li class="fragment">
-                                            <b>Better:</b> 
+                                            <b>Better:</b>
                                             emails and patches</li>
                                                 <li class="fragment">
-                                                  <b style="color:green">Best:</b> 
+                                                  <b style="color:green">Best:</b>
                                               remote version control</li>
                                         </ul>
                                           <p class="fragment">
-                                          <a 
-                                            href="https://raw.githubusercontent.com/katyhuff/ne255fall2014/gh-pages/images/pr.png" 
-                                            class="image"><img 
+                                          <a
+                                            href="https://raw.githubusercontent.com/katyhuff/ne255fall2014/gh-pages/images/pr.png"
+                                            class="image"><img
                                             src="https://raw.githubusercontent.com/katyhuff/ne255fall2014/gh-pages/images/pr.png"></a>
                                           </p>
 
@@ -916,17 +923,17 @@
                                         <h2>Peer Review For Code</h2>
                                         <ul>
                                           <li class="fragment">
-                                            <b>Good:</b> 
+                                            <b>Good:</b>
                                             separation of concerns</li>
-                                          
+
                                           <li class="fragment">
-                                            <b>Better:</b> 
+                                            <b>Better:</b>
                                             shared repository</li>
                                           <li class="fragment">
-                                            <b style="color:green">Best:</b> 
+                                            <b style="color:green">Best:</b>
                                             peer-reviewed pull requests</li>
                                         </ul>
-                                        <blockquote class="fragment" cite="Petre, Wilson. Code Review For and 
+                                        <blockquote class="fragment" cite="Petre, Wilson. Code Review For and
                                           By Scientists, July 2014.">
                                         &ldquo;
                                         just-in-time review of small
@@ -942,20 +949,20 @@
                                         <h2>Teamwork</h2>
                                         <ul>
                                           <li class="fragment">
-                                            <b>Good:</b> 
+                                            <b>Good:</b>
                                             weekly research meetings, year-long tasks</li>
-                                          
+
                                           <li class="fragment">
-                                            <b>Better:</b> 
+                                            <b>Better:</b>
                                             daily conversations, month-long goals</li>
                                           <li class="fragment">
-                                            <b style="color:green">Best:</b> 
+                                            <b style="color:green">Best:</b>
                                             pair programming, issue tracking</li>
                                         </ul>
                                           <p class="fragment">
-                                          <a 
-                                            href="https://help.github.com/articles/about-issues" 
-                                            class="image"><img 
+                                          <a
+                                            href="https://help.github.com/articles/about-issues"
+                                            class="image"><img
                                             src="https://raw.githubusercontent.com/katyhuff/ne255fall2014/gh-pages/images/issues.png"></a>
                                           </p>
 
@@ -965,28 +972,28 @@
                                         <h2>Software Handovers</h2>
                                         <ul>
                                           <li class="fragment">
-                                            <b>Good:</b> 
+                                            <b>Good:</b>
                                             zip file, theory paper</li>
-                                          
+
                                           <li class="fragment">
-                                            <b>Better:</b> 
-                                            comments in code, example input 
+                                            <b>Better:</b>
+                                            comments in code, example input
                                             file</li>
                                           <li class="fragment">
-                                            <b style="color:green">Best:</b> 
-                                            automated documentation, test 
+                                            <b style="color:green">Best:</b>
+                                            automated documentation, test
                                             suite</li>
                                         </ul>
                                         <br/>
                                         <br/>
                                         <p class="fragment">
-                                        <b style="color:blue">Books:</b> 
+                                        <b style="color:blue">Books:</b>
                                         Clean Code, Working Effectively with Legacy Code
                                         </p>
                                         <p class="fragment">
-                                        <b style="color:blue">Tools:</b> 
-                                          sphinx, doxygen, gooletest, 
-                                          unitttest, nosetests 
+                                        <b style="color:blue">Tools:</b>
+                                          sphinx, doxygen, gooletest,
+                                          unitttest, nosetests
                                         </p>
 
 
@@ -998,8 +1005,8 @@
                                         <h2>Getting It Out There</h2>
                                         <blockquote cite="katy huff">
                                                 &ldquo;
-                                                If a piece of scientific 
-                                                software is released in the 
+                                                If a piece of scientific
+                                                software is released in the
                                                 forest, does it change the field?
                                                 &rdquo;
                                         </blockquote>
@@ -1010,19 +1017,19 @@
                                         <h2>Plotting</h2>
                                         <ul>
                                           <li class="fragment">
-                                            <b>Good:</b> 
-                                            custom formatting, clickable 
+                                            <b>Good:</b>
+                                            custom formatting, clickable
                                               GUI</li>
-                                          
+
                                           <li class="fragment">
-                                            <b>Better:</b> 
-                                            plot format templates (excel, 
+                                            <b>Better:</b>
+                                            plot format templates (excel,
                                               mathematica)</li>
                                           <li class="fragment">
-                                            <b style="color:green">Best:</b> 
-                                            scripted plotting, matplotlib, 
+                                            <b style="color:green">Best:</b>
+                                            scripted plotting, matplotlib,
                                             gnuplot, etc. </li>
-                                          
+
                                         </ul>
                                         </section>
 
@@ -1031,47 +1038,47 @@
                                         <h2>Writing</h2>
                                         <ul>
                                           <li class="fragment">
-                                            <b>Good:</b> 
+                                            <b>Good:</b>
                                             stone tablet, microsoft word</li>
-                                          
+
                                           <li class="fragment">
-                                            <b>Better:</b> 
-                                            word with track changes, open 
+                                            <b>Better:</b>
+                                            word with track changes, open
                                               office</li>
                                           <li class="fragment">
-                                            <b style="color:green">Best:</b> 
-                                            plain text markup with version 
+                                            <b style="color:green">Best:</b>
+                                            plain text markup with version
                                             control and a makefile</li>
                                         </ul>
                                         <br/>
                                         <br/>
                                         <p class="fragment">
-                                        <b style="color:blue">Tools:</b> 
-                                            LaTeX, markdown, restructured 
+                                        <b style="color:blue">Tools:</b>
+                                            LaTeX, markdown, restructured
                                             text</li>
                                         </p>
-                                          
+
                                         </section>
 
 					<section>
                                         <h2>Distribution Control</h2>
                                         <ul>
                                           <li class="fragment">
-                                            <b>Good:</b> 
+                                            <b>Good:</b>
                                             "email to request access"</li>
-                                          
+
                                           <li class="fragment">
-                                            <b>Better:</b> 
+                                            <b>Better:</b>
                                             license file</li>
                                           <li class="fragment">
-                                            <b style="color:green">Best:</b> 
+                                            <b style="color:green">Best:</b>
                                             license file, citation file, DOI, forkable repository</li>
-                                          
+
                                         </ul>
                                         <br/>
                                         <br/>
                                         <p class="fragment">
-                                        <b style="color:blue">Example:</b> 
+                                        <b style="color:blue">Example:</b>
                                         github.com/cyclus
                                         </p>
                                         <p class="fragment">
@@ -1081,18 +1088,18 @@
                                         <h2>Community Adoption</h2>
                                         <ul>
                                           <li class="fragment">
-                                            <b>Good:</b> 
+                                            <b>Good:</b>
                                             none, internal use only</li>
-                                          
+
                                           <li class="fragment">
-                                            <b>Better:</b> 
-                                            online repository, developer 
+                                            <b>Better:</b>
+                                            online repository, developer
                                               email online</li>
                                           <li class="fragment">
-                                            <b style="color:green">Best:</b> 
-                                            issue tracker, user/developer 
-                                              listhost(s), online 
-                                            documentation</li> 
+                                            <b style="color:green">Best:</b>
+                                            issue tracker, user/developer
+                                              listhost(s), online
+                                            documentation</li>
                                         </ul>
                                         </section>
                                         <section>
@@ -1411,7 +1418,7 @@
                                         it was annealed from conversations with
                                         colleagues throughout the scientific
                                         and computing communities (too many of
-                                        you to name). 
+                                        you to name).
                                         </section>
                                         </section>
 
@@ -1440,117 +1447,117 @@
                                         <ul>
                                           <li>
                                           <a href="http://www.plosbiology.org/article/info%3Adoi%2F10.1371%2Fjournal.pbio.1001745">
-                                          Wilson, Greg, D. A. Aruliah, C. Titus Brown, 
-                                          Neil P. Chue Hong, Matt Davis, Richard T. 
-                                          Guy, Steven H. D. Haddock, Kathryn D. Huff, 
-                                          et al. 2014. “Best Practices for Scientific 
-                                          Computing.” PLoS Biol 12 (1): e1001745.  
+                                          Wilson, Greg, D. A. Aruliah, C. Titus Brown,
+                                          Neil P. Chue Hong, Matt Davis, Richard T.
+                                          Guy, Steven H. D. Haddock, Kathryn D. Huff,
+                                          et al. 2014. “Best Practices for Scientific
+                                          Computing.” PLoS Biol 12 (1): e1001745.
                                           doi:10.1371/journal.pbio.1001745.
                                           </a></li>
 
                                           <li>
-                                          <a href="https://arxiv.org/abs/1609.00037"> 
-                                                  Wilson, Greg, Jennifer Bryan, 
-                                                  Karen Cranston, Justin 
-                                                  Kitzes, Lex Nederbragt, and 
-                                                  Tracy K. Teal. 2016. “Good 
-                                                  Enough Practices in 
-                                                  Scientific Computing.” 
-                                                  arXiv:1609.00037 [Cs], 
-                                                  August. 
+                                          <a href="https://arxiv.org/abs/1609.00037">
+                                                  Wilson, Greg, Jennifer Bryan,
+                                                  Karen Cranston, Justin
+                                                  Kitzes, Lex Nederbragt, and
+                                                  Tracy K. Teal. 2016. “Good
+                                                  Enough Practices in
+                                                  Scientific Computing.”
+                                                  arXiv:1609.00037 [Cs],
+                                                  August.
                                                   http://arxiv.org/abs/1609.00037.
 </a></li>
-                                          <li> <a href="https://www.amazon.com/Effective-Computation-Physics-Anthony-Scopatz/dp/1491901535"> 
-                                                  Scopatz, Anthony, and 
-                                          Kathryn D. Huff. 2015. Effective 
-                                          Computation in Physics.  1st edition. 
+                                          <li> <a href="https://www.amazon.com/Effective-Computation-Physics-Anthony-Scopatz/dp/1491901535">
+                                                  Scopatz, Anthony, and
+                                          Kathryn D. Huff. 2015. Effective
+                                          Computation in Physics.  1st edition.
                           S.l.: O’Reilly Media.  </a></li>
 
                                           <li>
                                           <a href="http://dx.doi.org/10.5334/jors.ba">
-                                            Blanton, Brian, and Chris Lenhardt. 2014. “A 
-                                          Scientist’s Perspective on Sustainable 
-                                          Scientific Software.” Journal of Open 
-                                          Research Software, Issues in Research 
-                                          Software, 2 (1): e17. 
+                                            Blanton, Brian, and Chris Lenhardt. 2014. “A
+                                          Scientist’s Perspective on Sustainable
+                                          Scientific Software.” Journal of Open
+                                          Research Software, Issues in Research
+                                          Software, 2 (1): e17.
                                           </a></li>
-        
+
                                           <li>
                                           <a href="http://dx.doi.org/10.1109/MCSE.2009.15">
-                                          Donoho, David L., Arian Maleki, Inam Ur 
-                                          Rahman, Morteza Shahram, and Victoria 
-                                          Stodden. 2009. “Reproducible Research in 
-                                          Computational Harmonic Analysis.” Computing 
-                                          in Science & Engineering 11 (1): 8–18. 
+                                          Donoho, David L., Arian Maleki, Inam Ur
+                                          Rahman, Morteza Shahram, and Victoria
+                                          Stodden. 2009. “Reproducible Research in
+                                          Computational Harmonic Analysis.” Computing
+                                          in Science & Engineering 11 (1): 8–18.
                                           doi:10.1109/MCSE.2009.15.
                                           </a></li>
-        
+
                                           <li>
                                           <a href="http://dx.doi.org/10.1109/MIC.2014.88">
-                                          Goble, Carole. 2014. “Better Software, Better 
-                                          Research.” IEEE Internet Computing 18 (5): 
+                                          Goble, Carole. 2014. “Better Software, Better
+                                          Research.” IEEE Internet Computing 18 (5):
                                           4–8. doi:10.1109/MIC.2014.88.
                                           </a></li>
-        
+
                                           <li>
                                           <a href="http://dl.acm.org/citation.cfm?id=1556928">
-                                          Hannay, J. E, C. MacLeod, J. Singer, H. P 
-                                          Langtangen, D. Pfahl, and G. Wilson. 2009. 
-                                          “How Do Scientists Develop and Use Scientific 
-                                          Software?” In Proceedings of the 2009 ICSE 
-                                          Workshop on Software Engineering for 
+                                          Hannay, J. E, C. MacLeod, J. Singer, H. P
+                                          Langtangen, D. Pfahl, and G. Wilson. 2009.
+                                          “How Do Scientists Develop and Use Scientific
+                                          Software?” In Proceedings of the 2009 ICSE
+                                          Workshop on Software Engineering for
                                           Computational Science and Engineering, 1–8.
                                           </a></li>
-        
+
                                           <li>
                                           <a href="http://dx.doi.org/10.1126/science.1231535">
-                                          Joppa, L. N., G. McInerny, R. Harper, L. 
-                                          Salido, K. Takeda, K. O’Hara, D. Gavaghan, 
-                                          and S. Emmott. 2013. “Troubling Trends in 
-                                          Scientific Software Use.” Science 340 (6134): 
+                                          Joppa, L. N., G. McInerny, R. Harper, L.
+                                          Salido, K. Takeda, K. O’Hara, D. Gavaghan,
+                                          and S. Emmott. 2013. “Troubling Trends in
+                                          Scientific Software Use.” Science 340 (6134):
                                           814–15.  doi:10.1126/science.1231535.
                                           </a></li>
-        
+
                                           <li>
                                           <a href="http://dx.doi/org/10.1038/467775a">
-                                          Merali, Zeeya. 2010. “Computational Science: 
-                                          ...Error.” Nature 467 (7317): 775–77. 
+                                          Merali, Zeeya. 2010. “Computational Science:
+                                          ...Error.” Nature 467 (7317): 775–77.
                                           doi:10.1038/467775a.
                                           </a></li>
-        
+
                                           <li>
                                           <a href="http://arxiv.org/abs/1407.5648">
-                                          Petre, Marian, and Greg Wilson. 2014. “Code 
-                                          Review For and By Scientists.” 
-                                          arXiv:1407.5648 [cs], July. 
+                                          Petre, Marian, and Greg Wilson. 2014. “Code
+                                          Review For and By Scientists.”
+                                          arXiv:1407.5648 [cs], July.
                                           </a></li>
-        
+
                                           <li>
                                           <a href="http://arxiv.org/abs/1407.6220">
-                                          Schossau, Jory, and Greg Wilson. 2014. “Which 
-                                          Sustainable Software Practices Do Scientists 
-                                          Find Most Useful?” arXiv:1407.6220 [cs], 
+                                          Schossau, Jory, and Greg Wilson. 2014. “Which
+                                          Sustainable Software Practices Do Scientists
+                                          Find Most Useful?” arXiv:1407.6220 [cs],
                                           July.
                                           </a></li>
-        
+
                                           <li>
                                           <a href="http://dx.doi.org/10.2139/ssrn.1550193">
-                                          Stodden, Victoria. 2010. “The Scientific 
-                                          Method in Practice: Reproducibility in the 
-                                          Computational Sciences.” SSRN Electronic 
+                                          Stodden, Victoria. 2010. “The Scientific
+                                          Method in Practice: Reproducibility in the
+                                          Computational Sciences.” SSRN Electronic
                                           Journal. doi:10.2139/ssrn.1550193.
                                           </a></li>
-        
+
                                           <li>
                                           <a href="http://dx.doi.org/10.1371/journal.pone.0026828">
-                                          Wicherts, Jelte M., Marjan Bakker, and Dylan 
-                                          Molenaar. 2011. “Willingness to Share 
-                                          Research Data Is Related to the Strength of 
-                                          the Evidence and the Quality of Reporting of 
-                                          Statistical Results.” PLoS ONE 6 (11): 
+                                          Wicherts, Jelte M., Marjan Bakker, and Dylan
+                                          Molenaar. 2011. “Willingness to Share
+                                          Research Data Is Related to the Strength of
+                                          the Evidence and the Quality of Reporting of
+                                          Statistical Results.” PLoS ONE 6 (11):
                                           e26828. doi:10.1371/journal.pone.0026828.
                                           </a></li>
-        
+
                                         </ul>
                                       </small>
                                         </section>
@@ -1566,14 +1573,15 @@
 				<section>
 					<h1>THE END</h1>
                                         <h3>Katy Huff </h3>
-                                        <a href="https://katyhuff.github.io/2018-03-27-npre199">katyhuff.github.io/2018-03-27-npre199</a> 
+                                        <a href="https://katyhuff.github.io/2018-03-27-npre199">katyhuff.github.io/2018-03-27-npre199</a>
 
 <br/>
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img 
-  alt="Creative Commons License" style="border-width:0" 
-  src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span 
-  xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Doing Our Best: Practices in Computational Nuclear Engineering</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://katyhuff.github.io" property="cc:attributionName" rel="cc:attributionURL">Kathryn Huff</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="http://katyhuff.github.io/2018-03-27-npre199" rel="dct:source">http://katyhuff.github.io/2018-03-27-npre199</a>.  
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img
+  alt="Creative Commons License" style="border-width:0"
+  src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span
+  xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Doing Our Best: Practices in Computational Nuclear Engineering</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://katyhuff.github.io" property="cc:attributionName" rel="cc:attributionURL">Kathryn Huff</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="http://katyhuff.github.io/2018-03-27-npre199" rel="dct:source">http://katyhuff.github.io/2018-03-27-npre199</a>.
 				</section>
+            -->
 
 			</div>
 
